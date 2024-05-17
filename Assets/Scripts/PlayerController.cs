@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     {
         movementHorizontal = Input.GetAxis("Horizontal");
 
+        // move within screen logic
         if ((movementHorizontal > 0 && transform.position.x < maxX) || (movementHorizontal < 0 && transform.position.x > - maxX))
         {
             transform.position += Vector3.right * movementHorizontal * playerSpeed * Time.deltaTime;
