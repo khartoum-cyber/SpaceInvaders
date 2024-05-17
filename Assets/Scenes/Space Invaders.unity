@@ -5133,6 +5133,8 @@ MonoBehaviour:
   player: {fileID: 1202733595}
   playerSpeed: 4
   maxX: 8.5
+  playerProjectile: {fileID: 6268524978186759768, guid: 9b9f8a65d5c872f4c8e12519f0cb5d0a, type: 3}
+  playerProjectileClone: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
