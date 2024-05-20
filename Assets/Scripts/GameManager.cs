@@ -14,12 +14,25 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        DrawEnemies();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void DrawEnemies()
+    {
+        for(int i = 0; i < size.x; i++)
+        {
+            for(int j = 0; j < size.y; j++)
+            {
+                newEnemy = Instantiate(enemy, enemies.transform);
+                newEnemy.transform.position = new Vector3(i * offset.x - 5.5f, j * offset.y + 0.8f, 0);
+                enemyCount++;
+            }
+        }
     }
 }
