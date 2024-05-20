@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerProjectileController : MonoBehaviour
 {
-    public float projectileSpeed = -3;
+    public float projectileSpeed = -5;
     public GameObject playerProjectile;
 
     // Start is called before the first frame update
