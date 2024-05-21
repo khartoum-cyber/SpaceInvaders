@@ -26,7 +26,8 @@ public class PlayerController : MonoBehaviour
             transform.position += Vector3.right * movementHorizontal * playerSpeed * Time.deltaTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        // fire projectile on KE 'space' only if there is none projectiles on canvas
+        if (Input.GetKeyDown(KeyCode.Space) && playerProjectileClone == null)
         {
             playerProjectileClone = Instantiate(playerProjectile, new Vector3(player.transform.position.x, player.transform.position.y + 0.6f), player.transform.rotation);
         }
