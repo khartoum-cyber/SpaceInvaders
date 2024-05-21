@@ -16,4 +16,10 @@ public class PlayerProjectileController : MonoBehaviour
     {
         transform.Translate(new Vector3(0, projectileSpeed * Time.deltaTime, 0));
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        collision.gameObject.SetActive(false);
+        Destroy(playerProjectile);
+    }
 }
