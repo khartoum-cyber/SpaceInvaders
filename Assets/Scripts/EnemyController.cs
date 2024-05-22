@@ -42,5 +42,22 @@ public class EnemyController : MonoBehaviour
             timer = 0;
             movementAmount = -movementAmount;
         }
+
+        fireTimer += Time.deltaTime;
+
+        if (fireTimer > timeToFire)
+        {
+            FireEnemyProjectile();
+            fireTimer = 0;
+        }
+    }
+
+    private void FireEnemyProjectile()
+    {
+        // if less than 1f - fire
+        if(Random.Range(0f, 500f) < 1)
+        {
+            enemyProjectileClone = Instantiate(enemyProjectile, new Vector3(enemy.transform.position.x, enemy.transform.position.y - 0.6f), enemy.transform.rotation);
+        }
     }
 }
