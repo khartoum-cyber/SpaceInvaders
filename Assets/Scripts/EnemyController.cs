@@ -37,7 +37,7 @@ public class EnemyController : MonoBehaviour
         // Move enemies vertically and reverse horizontal movement direction
         if (numOfMovements == 17)
         {
-            transform.Translate(0, -1, 0);
+            transform.Translate(0, (float)-0.5, 0);
             numOfMovements = 0;
             timer = 0;
             movementAmount = -movementAmount;
