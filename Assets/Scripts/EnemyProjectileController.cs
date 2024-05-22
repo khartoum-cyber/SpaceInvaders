@@ -27,5 +27,10 @@ public class EnemyProjectileController : MonoBehaviour
             collision.gameObject.SetActive(false);
             Destroy(enemyProjectile);
         }
+
+        if (collision.gameObject.tag == "BottomOfScreen")
+        {
+            Destroy(enemyProjectile);
+        }
     }
 }

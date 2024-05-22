@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - TopOfScreen
+  - BottomOfScreen
   layers:
   - Default
   - TransparentFX
