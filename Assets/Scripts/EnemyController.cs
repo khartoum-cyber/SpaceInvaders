@@ -19,13 +19,17 @@ public class EnemyController : MonoBehaviour
     {
         timer += Time.deltaTime;
 
+<<<<<<< HEAD
         // Move enemies horizontally
+=======
+>>>>>>> 4b0ec850f81e8fb445733bc8036a89a6990e1bf1
         if (timer > 0.5 && numOfMovements != 17)
         {
             transform.Translate(new Vector3(movementAmount, 0, 0));
             timer = 0;
             numOfMovements++;
         }
+<<<<<<< HEAD
 
         // Move enemies vertically and reverse horizontal movement direction
         if (numOfMovements == 17)
@@ -35,5 +39,7 @@ public class EnemyController : MonoBehaviour
             timer = 0;
             movementAmount = -movementAmount;
         }
+=======
+>>>>>>> 4b0ec850f81e8fb445733bc8036a89a6990e1bf1
     }
 }
