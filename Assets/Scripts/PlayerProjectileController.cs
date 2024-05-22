@@ -19,7 +19,15 @@ public class PlayerProjectileController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.SetActive(false);
-        Destroy(playerProjectile);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.SetActive(false);
+            Destroy(playerProjectile);
+        }
+
+        if (collision.gameObject.tag == "TopOfScreen")
+        {
+            Destroy(playerProjectile);
+        }
     }
 }
