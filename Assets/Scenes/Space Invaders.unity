@@ -5193,6 +5193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1376529477}
+  - component: {fileID: 1376529478}
   m_Layer: 0
   m_Name: Enemies
   m_TagString: Untagged
@@ -5215,6 +5216,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1376529478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376529476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07b8cdae79dd3554184fd73cdfb52ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyProjectile: {fileID: 6268524978186759768, guid: 5502e8eaf7ca45c448aea2e2c12a5b97, type: 3}
+  enemyProjectileClone: {fileID: 0}
+  enemy: {fileID: 147846, guid: e2a563409f05b26429e07cb45c0d2ea2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
