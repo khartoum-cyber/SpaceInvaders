@@ -439,6 +439,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &458981262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
+  m_PrefabInstance: {fileID: 572992451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &515747576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -465,7 +470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 427946, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.12
+      value: 5.24
       objectReference: {fileID: 0}
     - target: {fileID: 427946, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -628,7 +633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 427946, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.12
+      value: 5.24
       objectReference: {fileID: 0}
     - target: {fileID: 427946, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -699,7 +704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 427946, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.12
+      value: 5.24
       objectReference: {fileID: 0}
     - target: {fileID: 427946, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -743,6 +748,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 427946, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
   m_PrefabInstance: {fileID: 608080534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &755419473 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
+  m_PrefabInstance: {fileID: 515747576}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &927680947
 GameObject:
@@ -793,6 +803,15 @@ MonoBehaviour:
   enemy: {fileID: 147846, guid: e2a563409f05b26429e07cb45c0d2ea2, type: 3}
   enemies: {fileID: 1376529476}
   enemyCount: 0
+  lifeLost: 0
+  lives: 5
+  playGame: 0
+  livesImage:
+  - {fileID: 1843487856}
+  - {fileID: 755419473}
+  - {fileID: 1324940119}
+  - {fileID: 1033627465}
+  - {fileID: 458981262}
 --- !u!1001 &990980643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -819,7 +838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 427946, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.12
+      value: 5.24
       objectReference: {fileID: 0}
     - target: {fileID: 427946, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5694,6 +5713,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1033627465 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
+  m_PrefabInstance: {fileID: 2007017150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1202733594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5866,6 +5890,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
+--- !u!1 &1324940119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
+  m_PrefabInstance: {fileID: 608080534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1376529476
 GameObject:
   m_ObjectHideFlags: 0
@@ -5949,6 +5978,11 @@ Transform:
   - {fileID: 572992452}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1843487856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
+  m_PrefabInstance: {fileID: 990980643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2007017150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5975,7 +6009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 427946, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.12
+      value: 5.24
       objectReference: {fileID: 0}
     - target: {fileID: 427946, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
       propertyPath: m_LocalPosition.z

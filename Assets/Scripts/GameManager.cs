@@ -2,19 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public Vector2Int size;
     public Vector2 offset;
     public GameObject enemy;
     private GameObject newEnemy;
     public GameObject enemies;
     public int enemyCount = 0;
+    public bool lifeLost = false;
+    public int lives = 5;
+    public bool playGame = false;
+    public GameObject[] livesImage;
 
     // Start is called before the first frame update
     void Start()
     {
         DrawEnemies();
+        instance = this;
     }
 
     // Update is called once per frame
