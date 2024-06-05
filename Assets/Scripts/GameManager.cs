@@ -27,7 +27,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lifeLost == true)
+        if (lifeLost == true && lives <= 0)
+        {
+            playGame = false;
+            lifeLost = false;
+            Debug.Log("Game Over");
+        }
+        else if (lifeLost == true)
         {
             lives -= 1;
             livesImage[lives].SetActive(false);
