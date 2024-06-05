@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public int lives = 5;
     public bool playGame = false;
     public GameObject[] livesImage;
+    public Vector3 respawn = new Vector3(-1.6f, -4, 0);
 
     // Start is called before the first frame update
     void Start()

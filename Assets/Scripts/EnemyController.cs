@@ -23,32 +23,34 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-
-
-        // Move enemies horizontally
-        if (timer > 0.5 && numOfMovements != 17)
+        if (GameManager.instance.playGame == true)
         {
-            transform.Translate(new Vector3(movementAmount, 0, 0));
-            timer = 0;
-            numOfMovements++;
-        }
+            timer += Time.deltaTime;
 
-        // Move enemies vertically and reverse horizontal movement direction
-        if (numOfMovements == 17)
-        {
-            transform.Translate(0, (float)-0.5, 0);
-            numOfMovements = 0;
-            timer = 0;
-            movementAmount = -movementAmount;
-        }
+            // Move enemies horizontally
+            if (timer > 0.5 && numOfMovements != 17)
+            {
+                transform.Translate(new Vector3(movementAmount, 0, 0));
+                timer = 0;
+                numOfMovements++;
+            }
 
-        fireTimer += Time.deltaTime;
+            // Move enemies vertically and reverse horizontal movement direction
+            if (numOfMovements == 17)
+            {
+                transform.Translate(0, (float)-0.5, 0);
+                numOfMovements = 0;
+                timer = 0;
+                movementAmount = -movementAmount;
+            }
 
-        if (fireTimer > timeToFire)
-        {
-            FireEnemyProjectile();
-            fireTimer = 0;
+            fireTimer += Time.deltaTime;
+
+            if (fireTimer > timeToFire)
+            {
+                FireEnemyProjectile();
+                fireTimer = 0;
+            }
         }
     }
 

@@ -24,8 +24,9 @@ public class EnemyProjectileController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             // destroys player object
-            collision.gameObject.SetActive(false);
+            collision.gameObject.transform.position = GameManager.instance.respawn;
             Destroy(enemyProjectile);
+            GameManager.instance.playGame = false;
         }
 
         if (collision.gameObject.tag == "BottomOfScreen")

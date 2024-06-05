@@ -23,6 +23,7 @@ public class PlayerProjectileController : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
             Destroy(playerProjectile);
+            GameManager.instance.playGame = true;
         }
 
         if (collision.gameObject.tag == "TopOfScreen")
