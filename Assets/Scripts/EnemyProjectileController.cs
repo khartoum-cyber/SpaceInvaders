@@ -27,6 +27,7 @@ public class EnemyProjectileController : MonoBehaviour
             collision.gameObject.transform.position = GameManager.instance.respawn;
             Destroy(enemyProjectile);
             GameManager.instance.playGame = false;
+            GameManager.instance.lifeLost = true;
         }
 
         if (collision.gameObject.tag == "BottomOfScreen")

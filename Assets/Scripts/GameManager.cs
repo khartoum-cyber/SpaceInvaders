@@ -27,7 +27,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (lifeLost == true)
+        {
+            lives -= 1;
+            livesImage[lives].SetActive(false);
+            lifeLost = false;
+        }
     }
 
     private void DrawEnemies()
