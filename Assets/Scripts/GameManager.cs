@@ -18,12 +18,20 @@ public class GameManager : MonoBehaviour
     public bool enemyBreach = false;
     public TMP_Text scoreText;
     public int score = 0;
+    public GameObject levelTwoOn;
+    public GameObject levelTwoOff;
+    public GameObject levelThreeOn;
+    public GameObject levelThreeOff;
+    public TMP_Text levelText;
+    private int level = 1;
+
 
     // Start is called before the first frame update
     void Start()
     {
         DrawEnemies();
         instance = this;
+        LevelDisplay(level);
     }
 
     // Update is called once per frame
@@ -63,5 +71,32 @@ public class GameManager : MonoBehaviour
                 enemyCount++;
             }
         }
+    }
+
+    private void LevelDisplay(int newLevel)
+    {
+        switch (newLevel)
+        {
+            case 1:
+                levelTwoOn.SetActive(false);
+                levelTwoOff.SetActive(true);
+                levelThreeOn.SetActive(false);
+                levelThreeOff.SetActive(true);
+                break;
+            case 2:
+                levelTwoOn.SetActive(true);
+                levelTwoOff.SetActive(false);
+                levelThreeOn.SetActive(false);
+                levelThreeOff.SetActive(true);
+                break;
+            case 3:
+                levelTwoOn.SetActive(true);
+                levelTwoOff.SetActive(false);
+                levelThreeOn.SetActive(true);
+                levelThreeOff.SetActive(false);
+                break;
+        }
+
+        levelText.text = newLevel.ToString("0");
     }
 }

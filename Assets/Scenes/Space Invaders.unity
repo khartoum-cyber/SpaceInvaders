@@ -1118,6 +1118,11 @@ MonoBehaviour:
   enemyBreach: 0
   scoreText: {fileID: 503334643}
   score: 0
+  levelTwoOn: {fileID: 102602367}
+  levelTwoOff: {fileID: 1985418702}
+  levelThreeOn: {fileID: 2065404375}
+  levelThreeOff: {fileID: 1890020184}
+  levelText: {fileID: 981713452}
 --- !u!1 &981713450
 GameObject:
   m_ObjectHideFlags: 0
