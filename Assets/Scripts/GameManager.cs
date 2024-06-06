@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +16,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] livesImage;
     public Vector3 respawn = new Vector3(-1.6f, -4, 0);
     public bool enemyBreach = false;
+    public TMP_Text scoreText;
+    public int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        scoreText.text = score.ToString("00000");
+
         if ((lifeLost == true && lives <= 0) || enemyBreach == true)
         {
             playGame = false;

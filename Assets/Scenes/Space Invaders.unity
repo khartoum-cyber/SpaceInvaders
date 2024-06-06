@@ -948,6 +948,8 @@ MonoBehaviour:
   - {fileID: 458981262}
   respawn: {x: -1.6, y: -4, z: 0}
   enemyBreach: 0
+  scoreText: {fileID: 503334643}
+  score: 0
 --- !u!1001 &990980643
 PrefabInstance:
   m_ObjectHideFlags: 0

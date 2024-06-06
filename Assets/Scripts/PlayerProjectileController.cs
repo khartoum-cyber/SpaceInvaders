@@ -25,6 +25,7 @@ public class PlayerProjectileController : MonoBehaviour
             Destroy(playerProjectile);
             GameManager.instance.playGame = true;
             GameManager.instance.enemyCount--;
+            GameManager.instance.score += 25;
         }
 
         if (collision.gameObject.CompareTag("TopOfScreen"))
