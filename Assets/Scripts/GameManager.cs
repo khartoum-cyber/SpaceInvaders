@@ -41,6 +41,12 @@ public class GameManager : MonoBehaviour
             livesImage[lives].SetActive(false);
             lifeLost = false;
         }
+
+        if(enemyCount == 0 && playGame == true)
+        {
+            playGame = false;
+            Debug.Log("You win !");
+        }
     }
 
     private void DrawEnemies()
