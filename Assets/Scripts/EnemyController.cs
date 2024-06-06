@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour
     public GameObject enemy;
     private float fireTimer = 0;
     private float timeToFire = 0.1f;
+    private float maxY = -3.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,12 @@ public class EnemyController : MonoBehaviour
                 numOfMovements = 0;
                 timer = 0;
                 movementAmount = -movementAmount;
+
+                if(transform.position.y < maxY)
+                {
+                    GameManager.instance.enemyBreach = true;
+                    GameManager.instance.playGame = false;
+                }
             }
 
             fireTimer += Time.deltaTime;

@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public bool playGame = false;
     public GameObject[] livesImage;
     public Vector3 respawn = new Vector3(-1.6f, -4, 0);
+    public bool enemyBreach = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,10 +28,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lifeLost == true && lives <= 0)
+        if ((lifeLost == true && lives <= 0) || enemyBreach == true)
         {
             playGame = false;
             lifeLost = false;
+            enemyBreach = false;
             Debug.Log("Game Over");
         }
         else if (lifeLost == true)
