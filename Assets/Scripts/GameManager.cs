@@ -73,6 +73,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Restart()
+    {
+        
+    }
+
     private void LevelDisplay(int newLevel)
     {
         switch (newLevel)
