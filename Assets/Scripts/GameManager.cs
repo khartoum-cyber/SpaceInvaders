@@ -24,6 +24,17 @@ public class GameManager : MonoBehaviour
     public GameObject levelThreeOff;
     public TMP_Text levelText;
     private int level = 1;
+    public GameObject modalPanel;
+    public GameObject startGamePanel;
+    public GameObject dialogBorder;
+    public TMP_Text level1HitPointsDisplay;
+    public TMP_Text level2HitPointsDisplay;
+    public TMP_Text level3HitPointsDisplay;
+    public int level1HitPoints = 25;
+    public int level2HitPoints = 50;
+    public int level3HitPoints = 200;
+    private const int freezeGame = 0;
+    private const int unfreezeGame = 1;
 
 
     // Start is called before the first frame update
@@ -32,6 +43,13 @@ public class GameManager : MonoBehaviour
         DrawEnemies();
         instance = this;
         LevelDisplay(level);
+        level1HitPointsDisplay.text = level1HitPoints.ToString("000");
+        level2HitPointsDisplay.text = level2HitPoints.ToString("000");
+        level3HitPointsDisplay.text = level3HitPoints.ToString("000");
+        modalPanel.SetActive(true);
+        startGamePanel.SetActive(true);
+        dialogBorder.SetActive(true);
+        Time.timeScale = freezeGame;
     }
 
     // Update is called once per frame
@@ -75,7 +93,17 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        
+        if (modalPanel.activeInHierarchy)
+        {
+            modalPanel.SetActive(false);
+        }
+
+        if (startGamePanel.activeInHierarchy)
+        {
+            startGamePanel.SetActive(false);
+            dialogBorder.SetActive(false);
+            Time.timeScale = unfreezeGame;
+        }
     }
 
     private void LevelDisplay(int newLevel)

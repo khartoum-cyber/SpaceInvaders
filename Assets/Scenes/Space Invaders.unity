@@ -1367,7 +1367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &252767500
 Transform:
   m_ObjectHideFlags: 0
@@ -2523,6 +2523,15 @@ MonoBehaviour:
   levelThreeOn: {fileID: 2065404375}
   levelThreeOff: {fileID: 1890020184}
   levelText: {fileID: 981713452}
+  modalPanel: {fileID: 7947648}
+  startGamePanel: {fileID: 1368335468}
+  dialogBorder: {fileID: 252767499}
+  level1HitPointsDisplay: {fileID: 744831131}
+  level2HitPointsDisplay: {fileID: 1882397633}
+  level3HitPointsDisplay: {fileID: 1574637558}
+  level1HitPoints: 25
+  level2HitPoints: 50
+  level3HitPoints: 200
 --- !u!1 &981713450
 GameObject:
   m_ObjectHideFlags: 0
@@ -8230,7 +8239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1368335469
 RectTransform:
   m_ObjectHideFlags: 0
