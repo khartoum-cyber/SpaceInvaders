@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     public int level3HitPoints = 200;
     private const int freezeGame = 0;
     private const int unfreezeGame = 1;
+    public GameObject endGamePanel;
+    public TMP_Text endGameText;
 
 
     // Start is called before the first frame update
@@ -62,7 +64,11 @@ public class GameManager : MonoBehaviour
             playGame = false;
             lifeLost = false;
             enemyBreach = false;
-            Debug.Log("Game Over");
+            endGameText.text = "GAME OVER";
+            modalPanel.SetActive(true);
+            endGamePanel.SetActive(true);
+            dialogBorder.SetActive(true);
+            Time.timeScale = freezeGame;
         }
         else if (lifeLost == true)
         {
@@ -101,6 +107,13 @@ public class GameManager : MonoBehaviour
         if (startGamePanel.activeInHierarchy)
         {
             startGamePanel.SetActive(false);
+            dialogBorder.SetActive(false);
+            Time.timeScale = unfreezeGame;
+        }
+
+        if (endGamePanel.activeInHierarchy)
+        {
+            endGamePanel.SetActive(false);
             dialogBorder.SetActive(false);
             Time.timeScale = unfreezeGame;
         }
