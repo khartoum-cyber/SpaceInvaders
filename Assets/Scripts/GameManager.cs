@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Xml.Serialization;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
     private const int unfreezeGame = 1;
     public GameObject endGamePanel;
     public TMP_Text endGameText;
+    public GameObject exitGamePanel;
 
     // Start is called before the first frame update
     void Start()
@@ -84,6 +86,11 @@ public class GameManager : MonoBehaviour
             modalPanel.SetActive(true);
             dialogBorder.SetActive(true);
             Time.timeScale = freezeGame;
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape) && !endGamePanel.activeInHierarchy && !startGamePanel.activeInHierarchy)
+        {
+            ExitPrompt();
         }
     }
 
@@ -147,5 +154,27 @@ public class GameManager : MonoBehaviour
         }
 
         levelText.text = newLevel.ToString("0");
+    }
+
+    public void ExitPrompt()
+    {
+        modalPanel.SetActive(true);
+        exitGamePanel.SetActive(true);
+        dialogBorder.SetActive(true);
+        Time.timeScale = freezeGame;
+    }
+
+    public void NoExit()
+    {
+        modalPanel.SetActive(false);
+        exitGamePanel.SetActive(false);
+        dialogBorder.SetActive(false);
+        Time.timeScale = unfreezeGame;
+    }
+
+    public void ExitGame()
+    {
+        Debug.Log("Quit.");
+        Application.Quit();
     }
 }

@@ -1085,7 +1085,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 927680949}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Restart
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2878,6 +2878,7 @@ MonoBehaviour:
   level3HitPoints: 200
   endGamePanel: {fileID: 240694540}
   endGameText: {fileID: 1600708694}
+  exitGamePanel: {fileID: 2129329141}
 --- !u!1 &979551871
 GameObject:
   m_ObjectHideFlags: 0
@@ -8308,7 +8309,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 927680949}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Restart
+        m_MethodName: NoExit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11711,7 +11712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2129329142
 RectTransform:
   m_ObjectHideFlags: 0
