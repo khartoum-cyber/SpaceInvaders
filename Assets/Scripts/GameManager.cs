@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
     public GameObject endGamePanel;
     public TMP_Text endGameText;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -80,7 +79,11 @@ public class GameManager : MonoBehaviour
         if(enemyCount == 0 && playGame == true)
         {
             playGame = false;
-            Debug.Log("You win !");
+            endGameText.text = "YOU WIN!";
+            endGamePanel.SetActive(true);
+            modalPanel.SetActive(true);
+            dialogBorder.SetActive(true);
+            Time.timeScale = freezeGame;
         }
     }
 
