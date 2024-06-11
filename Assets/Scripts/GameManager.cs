@@ -158,6 +158,15 @@ public class GameManager : MonoBehaviour
         hitPoints = level1HitPoints;
         enemySpeed = level1EnemySpeed;
         enemyFireRate = level1EnemyFireRate;
+
+        if (gameStart == false)
+        {
+            ResetGame();
+        }
+        else
+        {
+            gameStart = false;
+        }
     }
 
     public void ResetGame()
