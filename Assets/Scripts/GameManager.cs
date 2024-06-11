@@ -94,12 +94,21 @@ public class GameManager : MonoBehaviour
 
         if(enemyCount == 0 && playGame == true)
         {
-            playGame = false;
-            endGameText.text = "YOU WIN!";
-            endGamePanel.SetActive(true);
-            modalPanel.SetActive(true);
-            dialogBorder.SetActive(true);
-            Time.timeScale = freezeGame;
+            if(level == 3)
+            {
+                playGame = false;
+                endGameText.text = "YOU WIN!";
+                endGamePanel.SetActive(true);
+                modalPanel.SetActive(true);
+                dialogBorder.SetActive(true);
+                Time.timeScale = freezeGame;
+            }
+            else
+            {
+                playGame = false;
+                LevelUp();
+            }
+
         }
 
         if(Input.GetKeyDown(KeyCode.Escape) && !endGamePanel.activeInHierarchy && !startGamePanel.activeInHierarchy)
@@ -149,6 +158,33 @@ public class GameManager : MonoBehaviour
         hitPoints = level1HitPoints;
         enemySpeed = level1EnemySpeed;
         enemyFireRate = level1EnemyFireRate;
+    }
+
+    public void ResetGame()
+    {
+
+    }
+
+    private void LevelUp()
+    {
+        if (level == 1)
+        {
+            level = 2;
+            LevelDisplay(level);
+            hitPoints = level2HitPoints;
+            enemySpeed = level2EnemySpeed;
+            enemyFireRate = level2EnemyFireRate;
+            ResetGame();
+        }
+        else if (level == 2)
+        {
+            level = 3;
+            LevelDisplay(level);
+            hitPoints = level3HitPoints;
+            enemySpeed = level3EnemySpeed;
+            enemyFireRate = level3EnemyFireRate;
+            ResetGame();
+        }
     }
 
     private void LevelDisplay(int newLevel)
