@@ -29,7 +29,7 @@ public class EnemyController : MonoBehaviour
             timer += Time.deltaTime;
 
             // Move enemies horizontally
-            if (timer > 0.5 && numOfMovements != 17)
+            if (timer > GameManager.instance.enemySpeed && numOfMovements != 17)
             {
                 transform.Translate(new Vector3(movementAmount, 0, 0));
                 timer = 0;
@@ -64,7 +64,7 @@ public class EnemyController : MonoBehaviour
     private void FireEnemyProjectile()
     {
         // if less than 1f - fire
-        if(Random.Range(0f, 125f) < 1)
+        if(Random.Range(0f, GameManager.instance.enemyFireRate) < 1)
         {
             enemyProjectileClone = Instantiate(enemyProjectile, new Vector3(enemy.transform.position.x, enemy.transform.position.y - 0.6f), enemy.transform.rotation);
         }

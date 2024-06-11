@@ -141,6 +141,14 @@ public class GameManager : MonoBehaviour
             dialogBorder.SetActive(false);
             Time.timeScale = unfreezeGame;
         }
+
+        level = 1;
+        LevelDisplay(level);
+        score = 0;
+        scoreText.text = score.ToString("00000");
+        hitPoints = level1HitPoints;
+        enemySpeed = level1EnemySpeed;
+        enemyFireRate = level1EnemyFireRate;
     }
 
     private void LevelDisplay(int newLevel)
