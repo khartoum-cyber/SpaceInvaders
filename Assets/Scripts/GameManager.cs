@@ -39,6 +39,20 @@ public class GameManager : MonoBehaviour
     public GameObject endGamePanel;
     public TMP_Text endGameText;
     public GameObject exitGamePanel;
+    private int hitPoints;
+    public float enemySpeed;
+    public float level1EnemySpeed = 0.5f;
+    public float level2EnemySpeed = 0.4f;
+    public float level3EnemySpeed = 0.3f;
+    public float enemyFireRate;
+    public float level1EnemyFireRate = 150f;
+    public float level2EnemyFireRate = 125f;
+    public float level3EnemyFireRate = 100f;
+    private bool gameStart = true;
+    private bool resetEnemies = false;
+    public int timerResetCount;
+    public int timerResetTime;
+    public bool resetTimers = false;
 
     // Start is called before the first frame update
     void Start()
@@ -174,7 +188,6 @@ public class GameManager : MonoBehaviour
 
     public void ExitGame()
     {
-        Debug.Log("Quit.");
         Application.Quit();
     }
 }
