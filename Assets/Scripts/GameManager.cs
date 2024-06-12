@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Xml.Serialization;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -130,6 +131,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void ResetEnemies()
+    {
+        enemyCount = 0;
+
+        for (int i = 0; i < size.x; i++)
+        {
+            for (int j = 0; j < size.y; j++)
+            {
+                enemies.transform.GetChild(enemyCount).gameObject.SetActive(true);
+                enemies.transform.GetChild(enemyCount).position = new Vector3(i * offset.x - 5.5f, j * offset.y + 0.8f, 0);
+                enemyCount++;
+            }
+        }
+
+        resetEnemies = false;
+    }
+
     public void Restart()
     {
         if (modalPanel.activeInHierarchy)
@@ -171,6 +189,12 @@ public class GameManager : MonoBehaviour
 
     public void ResetGame()
     {
+        StopAllCoroutines();
+        StartCoroutine(GameReset());
+    }
+
+    IEnumerator GameReset()
+    {
         GameObject[] objectsToDestroy;
         objectsToDestroy = GameObject.FindGameObjectsWithTag("Projectile");
 
@@ -183,6 +207,12 @@ public class GameManager : MonoBehaviour
         {
             livesImage[i].SetActive(true);
         }
+
+        resetEnemies = true;
+        ResetEnemies();
+
+        while (resetEnemies == true)
+            yield return null;
     }
 
     private void LevelUp()
