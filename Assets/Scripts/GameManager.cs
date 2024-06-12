@@ -171,7 +171,13 @@ public class GameManager : MonoBehaviour
 
     public void ResetGame()
     {
+        GameObject[] objectsToDestroy;
+        objectsToDestroy = GameObject.FindGameObjectsWithTag("Projectile");
 
+        foreach(GameObject singleObject in objectsToDestroy)
+        {
+            Destroy(singleObject);
+        }
     }
 
     private void LevelUp()
