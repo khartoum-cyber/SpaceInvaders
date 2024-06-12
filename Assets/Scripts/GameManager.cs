@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
     public int timerResetCount;
     public int timerResetTime;
     public bool resetTimers = false;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -213,6 +214,15 @@ public class GameManager : MonoBehaviour
 
         while (resetEnemies == true)
             yield return null;
+
+        timerResetCount = 0;
+        resetTimers = true;
+
+        while (timerResetCount < enemyCount)
+            yield return null;
+
+        resetTimers = false;
+        player.transform.position = respawn;
     }
 
     private void LevelUp()

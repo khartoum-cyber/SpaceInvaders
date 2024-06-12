@@ -59,6 +59,15 @@ public class EnemyController : MonoBehaviour
                 fireTimer = 0;
             }
         }
+
+        if (GameManager.instance.resetTimers == true)
+        {
+            timer = 0;
+            numOfMovements = 0;
+            fireTimer = 0;
+            movementAmount = Mathf.Abs(movementAmount);
+            GameManager.instance.timerResetCount = GameManager.instance.timerResetCount + 1;
+        }
     }
 
     private void FireEnemyProjectile()

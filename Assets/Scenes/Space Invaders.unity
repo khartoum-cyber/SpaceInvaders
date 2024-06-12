@@ -2879,6 +2879,18 @@ MonoBehaviour:
   endGamePanel: {fileID: 240694540}
   endGameText: {fileID: 1600708694}
   exitGamePanel: {fileID: 2129329141}
+  enemySpeed: 0
+  level1EnemySpeed: 0.5
+  level2EnemySpeed: 0.4
+  level3EnemySpeed: 0.3
+  enemyFireRate: 0
+  level1EnemyFireRate: 150
+  level2EnemyFireRate: 125
+  level3EnemyFireRate: 100
+  timerResetCount: 0
+  timerResetTime: 0
+  resetTimers: 0
+  player: {fileID: 1202733595}
 --- !u!1 &979551871
 GameObject:
   m_ObjectHideFlags: 0
