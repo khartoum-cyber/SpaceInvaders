@@ -178,6 +178,11 @@ public class GameManager : MonoBehaviour
         {
             Destroy(singleObject);
         }
+
+        for (int i = 0; i <= 4; i++)
+        {
+            livesImage[i].SetActive(true);
+        }
     }
 
     private void LevelUp()
