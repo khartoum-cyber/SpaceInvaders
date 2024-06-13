@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)/* && playerProjectileClone == null*/)
         {
             playerProjectileClone = Instantiate(playerProjectile, new Vector3(player.transform.position.x, player.transform.position.y + 0.6f), player.transform.rotation);
+            PlayerFireSound.instance.PlayerFire();
         }
     }
 }
