@@ -223,6 +223,7 @@ public class GameManager : MonoBehaviour
 
         resetTimers = false;
         player.transform.position = respawn;
+        lives = 5;
     }
 
     private void LevelUp()
