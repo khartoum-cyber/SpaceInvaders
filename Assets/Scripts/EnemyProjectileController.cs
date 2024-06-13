@@ -24,10 +24,14 @@ public class EnemyProjectileController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             // destroys player object
-            //collision.gameObject.transform.position = GameManager.instance.respawn;
+            if (!(GameManager.instance.lives == 0))
+            {
+                collision.gameObject.transform.position = GameManager.instance.respawn;
+            }
             Destroy(enemyProjectile);
             GameManager.instance.playGame = false;
             GameManager.instance.lifeLost = true;
+            PlayerHitSound.instance.PlayerHit();
         }
 
         if (collision.gameObject.tag == "BottomOfScreen")

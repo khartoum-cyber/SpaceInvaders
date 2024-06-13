@@ -1,16 +1,16 @@
 using UnityEngine;
 
-public class PlayerFireSound : MonoBehaviour
+public class PlayerHitSound : MonoBehaviour
 {
-    public static PlayerFireSound instance;
+    public static PlayerHitSound instance;
     public AudioSource audio;
-    public AudioClip playerFireSound;
+    public AudioClip playerHitSound;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
-        audio.clip = playerFireSound;
+        audio.clip = playerHitSound;
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class PlayerFireSound : MonoBehaviour
         
     }
 
-    public void PlayerFire()
+    public void PlayerHit()
     {
         audio.Play();
     }
