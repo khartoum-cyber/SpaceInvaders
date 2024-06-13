@@ -31,6 +31,7 @@ public class EnemyController : MonoBehaviour
             // Move enemies horizontally
             if (timer > GameManager.instance.enemySpeed && numOfMovements != 17)
             {
+                EnemyMovementSound.instance.EnemyMovement();
                 transform.Translate(new Vector3(movementAmount, 0, 0));
                 timer = 0;
                 numOfMovements++;
