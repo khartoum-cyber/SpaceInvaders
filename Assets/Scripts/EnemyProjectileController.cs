@@ -24,7 +24,7 @@ public class EnemyProjectileController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             // destroys player object
-            collision.gameObject.transform.position = GameManager.instance.respawn;
+            //collision.gameObject.transform.position = GameManager.instance.respawn;
             Destroy(enemyProjectile);
             GameManager.instance.playGame = false;
             GameManager.instance.lifeLost = true;
