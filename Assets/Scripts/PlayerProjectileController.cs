@@ -29,7 +29,7 @@ public class PlayerProjectileController : MonoBehaviour
             Destroy(playerProjectile);
             GameManager.instance.playGame = true;
             GameManager.instance.enemyCount--;
-            GameManager.instance.score += 25;
+            GameManager.instance.score += GameManager.instance.hitPoints;
         }
 
         if (collision.gameObject.CompareTag("TopOfScreen"))

@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     public GameObject endGamePanel;
     public TMP_Text endGameText;
     public GameObject exitGamePanel;
-    private int hitPoints;
+    public int hitPoints;
     public float enemySpeed;
     public float level1EnemySpeed = 0.5f;
     public float level2EnemySpeed = 0.4f;
