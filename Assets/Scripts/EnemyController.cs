@@ -48,7 +48,7 @@ public class EnemyController : MonoBehaviour
                 timer = 0;
                 movementAmount = -movementAmount;
 
-                if(transform.position.y < maxY)
+                if (transform.position.y < maxY)
                 {
                     GameManager.instance.enemyBreach = true;
                     GameManager.instance.playGame = false;
