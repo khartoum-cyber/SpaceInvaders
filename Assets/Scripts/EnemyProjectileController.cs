@@ -31,7 +31,11 @@ public class EnemyProjectileController : MonoBehaviour
             Destroy(enemyProjectile);
             GameManager.instance.playGame = false;
             GameManager.instance.lifeLost = true;
-            PlayerHitSound.instance.PlayerHit();
+
+            if (GameManager.instance.soundOn == true)
+            {
+                PlayerHitSound.instance.PlayerHit();
+            }
         }
 
         if (collision.gameObject.tag == "BottomOfScreen")

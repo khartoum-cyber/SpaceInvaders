@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
     public int timerResetTime;
     public bool resetTimers = false;
     public GameObject player;
+    public bool soundOn = true;
 
     // Start is called before the first frame update
     void Start()
@@ -116,6 +117,18 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape) && !endGamePanel.activeInHierarchy && !startGamePanel.activeInHierarchy)
         {
             ExitPrompt();
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            if (soundOn == true)
+            {
+                soundOn = false;
+            }
+            else
+            {
+                soundOn = true;
+            }
         }
     }
 

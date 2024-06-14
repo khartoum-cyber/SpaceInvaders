@@ -21,7 +21,10 @@ public class PlayerProjectileController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            EnemyHitSound.instance.EnemyHit();
+            if (GameManager.instance.soundOn == true)
+            {
+                EnemyHitSound.instance.EnemyHit();
+            }
             collision.gameObject.SetActive(false);
             Destroy(playerProjectile);
             GameManager.instance.playGame = true;

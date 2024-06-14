@@ -3069,6 +3069,7 @@ MonoBehaviour:
   timerResetTime: 0
   resetTimers: 0
   player: {fileID: 1202733595}
+  soundOn: 1
 --- !u!1 &979551871
 GameObject:
   m_ObjectHideFlags: 0
